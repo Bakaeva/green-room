@@ -1,0 +1,16 @@
+{
+  "name": "green-room",
+  "version": "1.0.0",
+  "description": "green-room project с webpack (npm)",
+  "license": "ISC",
+  "author": "L.Bakaeva",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx webpack",
+    "watch": "npx webpack --watch"
+  },
+  "devDependencies": {
+    "webpack": "^5.111.1",
+    "webpack-cli": "^7.2.3"
+  }
+}
