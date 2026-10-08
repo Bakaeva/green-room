@@ -477,6 +477,14 @@ template, [hidden] {
     opacity: 0;
 }
 
+.header-contacts__phone-number-accord.is-open {
+    position: relative;
+}
+
+.header-contacts__phone-number-accord.is-open a {
+    opacity: 1;
+}
+
 .header-contacts__arrow {
     cursor: pointer;
     -webkit-transition: 0.5s;
@@ -486,6 +494,11 @@ template, [hidden] {
 .header-contacts__arrow img {
     margin-top: 12px;
     margin-left: 5px;
+}
+
+.header-contacts__arrow.is-open {
+    transform: scale(1, -1);
+    transition: transform 0.5s;
 }
 
 .header-contacts__messagers {
