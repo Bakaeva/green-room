@@ -9,7 +9,7 @@ const menu = () => {
 
   const closeMenu = () => {
     menuDialog.classList.remove('active-menu');
-    popup.classList.remove('active-menu');
+    setTimeout(() => popup.classList.remove('active-menu'), 1000); // ждем окончания анимации меню (1s), прежде чем скрыть оверлей
   };
 
   document.addEventListener('click', (e) => {
