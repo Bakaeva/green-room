@@ -4975,6 +4975,10 @@ div.wave-block:nth-child(17):after {
     overflow: hidden;
 }
 
+.link-privacy {
+    cursor: pointer;
+}
+
 @media (max-width: 575px) {
     .popup-dialog-privacy {
         border-radius: 0;
