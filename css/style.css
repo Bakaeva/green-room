@@ -6604,6 +6604,10 @@ div.wave-block:nth-child(17):after {
     background: linear-gradient(90deg, #2e9d6a 0%, #9bd36a 100%);
 }
 
+.popup-thank-bg.active {
+    transform: translate3d(0, 0, 0) !important;
+}
+
 @media (max-width: 575px) {
     .popup-thank-bg {
         height: 381px;
