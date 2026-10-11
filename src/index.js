@@ -6,6 +6,7 @@ import phoneMask from './modules/phoneMask';
 import submitFormModule from './modules/submitForm';
 import privacyPopup from './modules/privacyPopup';
 import formulaTooltips from './modules/formulaTooltips';
+import formulaSlider from './modules/formulaSlider';
 
 headerPhone();
 menu();
@@ -15,3 +16,4 @@ phoneMask();
 submitFormModule();
 privacyPopup();
 formulaTooltips();
+formulaSlider();

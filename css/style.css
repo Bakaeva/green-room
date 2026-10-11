@@ -1164,6 +1164,26 @@ template, [hidden] {
         margin-left: auto;
         margin-right: auto;
     }
+
+    .formula-slider {
+        position: relative;
+        min-height: 265px;
+    }
+    
+    .formula-slider__slide {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        transition: opacity 0.3s, visibility 0.3s;
+    }
+    
+    .formula-slider__slide.active-item {
+        opacity: 1 !important;
+        visibility: visible !important;
+    }
 }
 
 .formula .row {
