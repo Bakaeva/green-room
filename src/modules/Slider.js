@@ -3,13 +3,13 @@
  * @param {Object} config - Конфигурация слайдера
  * @param {string} config.container - CSS селектор контейнера слайдера
  * @param {string} config.slides - CSS селектор слайдов
- * @param {Object} [config.arrows] - Объект с id стрелок
- * @param {string} [config.arrows.left] - id левой стрелки
- * @param {string} [config.arrows.right] - id правой стрелки
+ * @param {Object} [config.arrows] - Объект с CSS селекторами стрелок
+ * @param {string} [config.arrows.left] - CSS селектор левой стрелки
+ * @param {string} [config.arrows.right] - CSS селектор правой стрелки
  * @param {string} [config.tabs] - CSS селектор табов (кнопок переключения)
  * @param {string} [config.dots] - CSS селектор точек-индикаторов
- * @param {string} [config.counterCurrent] - Селектор элемента текущего слайда в счетчике
- * @param {string} [config.counterTotal] - Селектор элемента общего количества слайдов
+ * @param {string} [config.counterCurrent] - CSS селектор элемента текущего слайда в счетчике
+ * @param {string} [config.counterTotal] - CSS селектор элемента общего количества слайдов
  * @param {Function} [config.onChange] - Callback функция, вызываемая при смене слайда
  * @param {string} [config.activeClass='active'] - CSS класс для активного состояния
  * @param {number} [config.inactiveOpacity=0.4] - Непрозрачность неактивных слайдов
@@ -128,12 +128,12 @@ class Slider {
     };
 
     this.container.addEventListener('click', (e) => {
-      const clickedLeftArrow = this.arrows?.left ? e.target.closest(`#${this.arrows.left}`) : null;
-      const clickedRightArrow = this.arrows?.right ? e.target.closest(`#${this.arrows.right}`) : null;
+      const clickedLeftArrow = this.arrows?.left ? e.target.closest(`${this.arrows.left}`) : null;
+      const clickedRightArrow = this.arrows?.right ? e.target.closest(`${this.arrows.right}`) : null;
       const arrowClick = clickedLeftArrow || clickedRightArrow;
 
-      const clickedTab = this.tabs && e.target.closest(`.${this.tabsSelector}`);
-      const clickedDot = this.dots && e.target.closest(`.${this.dotsSelector}`);
+      const clickedTab = this.tabs && e.target.closest(`${this.tabsSelector}`);
+      const clickedDot = this.dots && e.target.closest(`${this.dotsSelector}`);
       if (!clickedTab && !clickedDot && !arrowClick)
         return;
 

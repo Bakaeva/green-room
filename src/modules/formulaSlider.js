@@ -12,23 +12,13 @@ const formulaSlider = () => {
     container: '.formula-slider-wrap',
     slides: '.formula-slider__slide',
     arrows: {
-      left: 'formula-arrow_left',
-      right: 'formula-arrow_right'
+      left: '#formula-arrow_left',
+      right: '#formula-arrow_right'
     },
     counterCurrent: '.slider-counter-content__current',
     counterTotal: '.slider-counter-content__total',
     activeClass: 'active-item',
-    inactiveOpacity: 0.4,
-    // onChange: (currentIndex, currentSlide) => {
-    //   slider.slides.forEach(slide => {
-    //     slide.style.opacity = '';
-    //     slide.style.position = '';
-    //     slide.style.top = '';
-    //     slide.style.left = '';
-    //     slide.style.width = '';
-    //     slide.style.visibility = '';
-    //   });
-    // }
+    inactiveOpacity: 0.4
   });
 
   sliderContainer.addEventListener('click', (e) => {
@@ -36,20 +26,11 @@ const formulaSlider = () => {
     if (!icon)
       return;
 
-    // const item = icon.closest('.formula-item');
-    // const popup = item.querySelector('.formula-item-popup');
     const popup = icon.querySelector('.formula-item-popup');
     if (!popup)
       return;
 
     const isAlreadyOpen = popup.style.visibility === 'visible';
-
-    sliderContainer.querySelectorAll('.formula-item-popup').forEach(p => {
-      p.style.visibility = '';
-      p.style.opacity = '';
-      p.style.bottom = '';
-      p.style.top = '';
-    });
 
     if (!isAlreadyOpen) {
       popup.style.visibility = 'visible';
